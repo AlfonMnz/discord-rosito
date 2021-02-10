@@ -1,25 +1,25 @@
 require('dotenv').config();
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const {MessageEmbed} = require('discord.js');
+import runCommands from "./commands";
+import runIntervals from "./behaviour/intervals";
 
 client.on('ready', () => {
-    console.log('I am ready!');
+	runCommands(client);
+	runIntervals(client);
+	console.log('BOT STATUS [ON]');
 });
 
+client.on('message', async (msg) => {
 
-client.on('message', message => {
-    if (message.content.toLowerCase().includes("la isla de las tentaciones")){
-        message.react('#️⃣')
-        message.react('🇷')
-        message.react('🇴')
-        message.react('🇸')
-        message.react('🇮')
-        message.react('🇹')
-        message.react('🅾️')
-    }
 });
-
-
 
 client.login(process.env.TOKEN);
+
+(async () => {
+	//console.log(channelAlert);
+	/*setInterval(() => {
+		client.channels.cache.get('808397259476566096').send('@everyone La isla comienza')
+		//client.send('808397259476566096').send('Test')
+	}, 5000)*/
+})();
