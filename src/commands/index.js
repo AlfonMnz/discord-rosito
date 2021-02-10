@@ -7,8 +7,8 @@ const addChannelToAlert = makeAddChannelToAlert(alertDb);
 function runCommands(client) {
 	client.on('message', async (msg) => {
 		if (msg.content.startsWith('!aviso')) {
-			console.log(msg.content);
 			await addChannelToAlert(msg);
+			msg.channel.send('Se ha configurado este canal para avisar de la isla de las tentaciones');
 		}
 	})
 }

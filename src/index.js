@@ -15,11 +15,3 @@ client.on('message', async (msg) => {
 });
 
 client.login(process.env.TOKEN);
-
-(async () => {
-	//console.log(channelAlert);
-	/*setInterval(() => {
-		client.channels.cache.get('808397259476566096').send('@everyone La isla comienza')
-		//client.send('808397259476566096').send('Test')
-	}, 5000)*/
-})();
