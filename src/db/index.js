@@ -8,7 +8,7 @@ import AlertModel from './models/Alerts';
 
 import mongoose from 'mongoose';
 
-mongoose.connect(process.env.MONGOSTRING || 'mongodb://localhost/rosito', {
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/rosito', {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 	useFindAndModify: true
