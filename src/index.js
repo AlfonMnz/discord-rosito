@@ -7,7 +7,7 @@ import runIntervals from "./behaviour/intervals";
 client.on('ready', () => {
 	runCommands(client);
 	runIntervals(client);
-	console.log('BOT STATUS [ON]');
+	console.log('BOT STATUS [ ON ]');
 });
 
 client.on('message', async (msg) => {
